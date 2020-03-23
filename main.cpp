@@ -1,4 +1,6 @@
-int totalHammingDistance(vector<int>& nums) {
+class Solution {
+public:
+    int totalHammingDistance(vector<int>& nums) {
         int i;
         unsigned long long total = 0;        
         int bits[31] = {0};
@@ -11,4 +13,5 @@ int totalHammingDistance(vector<int>& nums) {
             total += bits[i] * (nums.size() - bits[i]);
         }
         return total;
-}
+    }
+};
